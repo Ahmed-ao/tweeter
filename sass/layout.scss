@@ -1,0 +1,223 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+	position: relative;
+	color: #545149;
+	background-color: #f4f1ec;
+	font-size: 24px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+nav {
+	top: 0px;
+	width: 100%;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: 'Bungee', cursive;
+	background-color: #4e36a1;
+	height: 120px;
+	color: white;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	margin-bottom: 1px;
+	z-index: 3;
+}
+@media only screen and (min-width: 600px) {
+	body {
+		margin-top: -15%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	header {
+		// margin-top: 3em;
+		margin-top: -12%;
+		width: 39%;
+		height: 40%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: 3em;
+		border-radius: 5px;
+		z-index: -1;
+	}
+}
+
+div > i {
+	align-self: flex-end;
+}
+div > span:nth-child(1) {
+	font-family: sans-serif;
+}
+.fa-angle-double-down {
+	color: red;
+	align-self: center;
+	justify-self: center;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+section {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+}
+form {
+	margin-top: 520px;
+}
+form > label {
+	display: block;
+	font-weight: bold;
+	border-bottom: 5px solid black;
+	margin-bottom: 9px;
+}
+#tweet-text {
+	display: block;
+	width: 100%;
+}
+.tweet {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+button {
+	background-color: #4e36a1;
+	font-family: 'Bungee', cursive;
+	color: #f4f1ec;
+}
+.counter {
+	font-family: 'Bungee', cursive;
+	font-weight: bold;
+}
+
+article {
+	margin-top: 39px;
+	padding: 1.5em;
+	border: 5px solid black;
+}
+article:hover {
+	box-shadow: 5px 10px #888888;
+}
+article > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+#tag {
+	color: #d1d1d1;
+}
+article > footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+article > h3 {
+	padding-bottom: 3px;
+	border-bottom: 5px solid black;
+}
+article > p {
+	margin-top: -10px;
+	padding-top: 0px;
+	padding-left: 21px;
+}
+article > footer > span {
+	margin: 3px;
+}
+article > footer > span:hover {
+	color: #ffc16f;
+}
+@mixin name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+article > div > span {
+	@include name;
+}
+#error {
+	width: 100%;
+	height: 120;
+	color: white;
+	background-color: red;
+	border: 3px solid red;
+	z-index: 200;
+}
+#warn {
+	padding: 9px;
+	width: 100%;
+	height: 120;
+	color: rgb(255, 210, 11);
+	background-color: white;
+	border: 3px solid yellow;
+}
+// Mobile
+@media only screen and (max-width: 600px) {
+	// body {
+	// margin-top: -15%;/
+	// }
+	section {
+		display: flex;
+		flex-direction: column;
+		width: 65%;
+	}
+	nav {
+		// bottom: -10%;
+		top: 0px;
+		width: 100%;
+		position: fixed;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-family: 'Bungee', cursive;
+		background-color: #4e36a1;
+		height: 120px;
+		color: white;
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+		margin-bottom: 1px;
+	}
+	.span {
+		justify-self: flex-start;
+		padding-right: 3em;
+	}
+	.div {
+		justify-self: flex-end;
+	}
+	header {
+		margin-top: 110px;
+		// margin-top: -30%;
+		width: 100%;
+		height: 400px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		// z-index: -1;
+	}
+}
+// Tablets / Desktops
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
