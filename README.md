@@ -13,7 +13,7 @@ This project has two layouts, mobile ones and desktop app. it provides warning m
 4. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 5. Go to <http://localhost:8080/> in your browser.
 
-## Dependenciesb
+## Dependencies
 
 - Express
 - Node 5.10.x or above
